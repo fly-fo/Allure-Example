@@ -1,0 +1,23 @@
+name: Allure TestOps Authentication Test
+on:
+  schedule:
+    - cron: '0 */13 * * *'  # Every 13 hours
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+      - name: Run tests
+        run: mvn test
+      - name: Upload Allure results
+        uses: actions/upload-artifact@v2
+        with:
+          name: allure-results
+          path: target/allure-results
