@@ -28,6 +28,7 @@ public class IssuesWebTest {
     }
 
     @Test
+    @AllureId("10627")
     @TM4J("AE-T3")
     @Microservice("Billing")
     @Story("Create new issue")
@@ -41,6 +42,7 @@ public class IssuesWebTest {
     }
 
     @Test
+    @AllureId("10625")
     @TM4J("AE-T4")
     @Microservice("Repository")
     @Story("Create new issue")
@@ -54,6 +56,7 @@ public class IssuesWebTest {
     }
 
     @Test
+    @AllureId("10628")
     @TM4J("AE-T5")
     @Microservice("Repository")
     @Story("Close existing issue")
