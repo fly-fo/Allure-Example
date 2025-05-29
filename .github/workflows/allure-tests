@@ -1,7 +1,7 @@
 name: Allure TestOps Authentication Test
 on:
   schedule:
-    - cron: '0 */13 * * *'  # Every 13 hours
+    - cron: '0 */13 * * *'  # Every 1 hours
   workflow_dispatch:  # Allow manual triggering
 
 jobs:
